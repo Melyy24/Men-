@@ -4,34 +4,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApplication2
+namespace menumenu
 {
-    class Program
+    class menumetodos
     {
-        static void Main(string[] args)
-
+        public bool cerrar( bool P)
         {
+            
+            if (P== false)
+            {
+                Console.WriteLine("sigamos con el programa");
+                Console.ReadLine();
+                Console.Clear();
+                return false;
+            }
+            else
+            {
+                Console.WriteLine("cerrando programa...");
+                return true;
+            }
+
+        }
+        public void Saludar()
+        {
+            Console.Write("Ingrese su nombre: ");
+            string nombre = Console.ReadLine();
+            Console.WriteLine($"¡Hola, {nombre}!");
+        }
+        public void Fecha()
+        {
+            DateTime fechaActual = DateTime.Now.Date;
+            Console.WriteLine("La fecha de hoy es: " + fechaActual.ToShortDateString());
+            Console.ReadLine();
+
+        }
+        static void Main(string[] args)
+        {
+            menumetodos m = new menumetodos();
             bool inf = false;
             String menu = "";
             while (inf == false)
             {
                 Console.WriteLine("ingrese cualquier opcion: .1 Saludar .2 Fecha .3 cerrar");
-
                 menu = Console.ReadLine();
                 switch (menu)
                 {
                     case "1":
-                
+
+                        m.Saludar();
+                        Console.Clear();
+
                         break;
                     case "2":
-          
+                        m.Fecha();
+                        Console.Clear();
+
                         break;
                     case "3":
-                     break;
-                        
+                        bool decision = false;
+                        Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
+                        String P = Console.ReadLine();
+                        if (P == "si" || P == "SI")
+                        {
+                            decision = true;
+                        }
+                        else if (P == "no" || P == "NO")
+                        {
+                            decision = false;
+                        }
+                        m.cerrar(decision);
+                        break;
+
                 }
             }
         }
     }
 }
-       
