@@ -1,1 +1,17 @@
-a
+ bool decision = false;
+                        Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
+                        String P = Console.ReadLine();
+                        if (P == "si" || P == "SI")
+                        {
+                            decision = true;
+                        }
+                        else if (P == "no" || P == "NO")
+                        {
+                            decision = false;
+                        }
+                        bool decisionF = cerrar(decision);
+                        if (decisionF = true)
+                        {
+                            return;
+                        }
+
