@@ -1,1 +1,65 @@
-Console.ReadLine("hola");
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+            Console.WriteLine("ingrese cualquier opcion: .1 Saludar .2 Fecha .3 cerrar");
+            String menu = Console.ReadLine();
+            switch (menu)
+            {
+                case "1": 
+                    Console.WriteLine("ingrese su nombre:");
+                    String n = Console.ReadLine();
+                    Console.WriteLine("hola " + n + "como esta tu día?");
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    bool decision = false;
+                    Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
+                    String P = Console.ReadLine();
+                    if (P == "si" || P == "SI")
+                    {
+                        decision = false;
+                    }
+                    else if (P == "no" || P == "NO")
+                    {
+                        decision = true;
+                    }
+                    bool decisionF = cerrar(decision);
+
+                    break;
+            }
+
+        }
+        
+        static bool cerrar(bool d)
+        {
+
+            
+            if (d == true)
+            {
+                Console.WriteLine("sigamos con el programa");
+                
+                return true;
+
+            }
+            else
+            {
+
+                Console.WriteLine("cerrando programa...");
+                return false;
+
+            }
+
+        }
+    }
+}
