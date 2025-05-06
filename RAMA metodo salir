@@ -15,3 +15,24 @@
                             return;
                         }
 
+       static bool cerrar(bool d)
+        {
+
+            
+            if (d == false)
+            {
+                Console.WriteLine("sigamos con el programa");
+                Console.ReadLine();
+                Console.Clear();
+                return false;
+
+            }
+            else
+            {
+
+                Console.WriteLine("cerrando programa...");
+                return true;
+                
+            }
+
+        }
