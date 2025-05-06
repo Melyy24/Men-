@@ -1,19 +1,37 @@
- bool decision = false;
-                        Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
-                        String P = Console.ReadLine();
-                        if (P == "si" || P == "SI")
-                        {
-                            decision = true;
-                        }
-                        else if (P == "no" || P == "NO")
-                        {
-                            decision = false;
-                        }
-                        bool decisionF = cerrar(decision);
-                        if (decisionF = true)
-                        {
-                            return;
-                        }
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+
+        {
+    
+
+
+        bool decision = false;
+                                Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
+                                String P = Console.ReadLine();
+                                if (P == "si" || P == "SI")
+                                {
+                                    decision = true;
+                                }
+                                else if (P == "no" || P == "NO")
+                                {
+                                    decision = false;
+                                }
+                                bool decisionF = cerrar(decision);
+                                if (decisionF = true)
+                                {
+                                    return;
+                                }
+        }
+     
 
        static bool cerrar(bool d)
         {
@@ -36,3 +54,5 @@
             }
 
         }
+    }
+}
