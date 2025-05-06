@@ -1,1 +1,12 @@
-Console.WriteLine ("Hola Mundo");
+using System;
+
+public class Program
+{
+    public static void Saludar()
+    {
+        Console.Write("Ingrese su nombre: ");
+        string nombre = Console.ReadLine();
+        Console.WriteLine($"¡Hola, {nombre}!");
+    }
+}
+
