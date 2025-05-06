@@ -28,8 +28,9 @@ namespace menumenu
         public void Saludar()
         {
             Console.Write("Ingrese su nombre: ");
-            string nombre = Console.ReadLine();
-            Console.WriteLine($"¡Hola, {nombre}!");
+            string nombre = Console.ReadLine();       
+            Console.WriteLine("¡Hola, " + nombre +"!");
+             Console.ReadLine();
         }
         public void Fecha()
         {
