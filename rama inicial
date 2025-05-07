@@ -12,7 +12,6 @@ namespace menumenu
         public void cerrar()
         {
             bool d = false;
-            String pf = "";
             Console.WriteLine("ingrese un si o no, si quiere salir del programa");
             String V = Console.ReadLine();
             if (V == "si" || V == "SI")
