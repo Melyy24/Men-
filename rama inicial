@@ -9,24 +9,36 @@ namespace menumenu
 {
     class menumetodos
     {
-        public bool cerrar(bool d)
+        public void cerrar()
         {
+            bool d = false;
+            String pf = "";
+            Console.WriteLine("ingrese un si o no, si quiere salir del programa");
+            String V = Console.ReadLine();
+            if (V == "si" || V == "SI")
+            {
+                d = false;
+            }
+            else if (V == "no" || V == "NO")
+            {
+                d = true;
+            }
 
-            if (d == false)
+
+            if (d == true)
             {
                 Console.WriteLine("sigamos con el programa");
                 Console.ReadLine();
                 Console.Clear();
-                return false;
+                return ;
             }
-            else
+            else if (d == false)
             {
                 Console.WriteLine("cerrando programa...");
                 Console.ReadLine();
-                return true;
-                
+                Environment.Exit(0);
+                return ;
             }
-
         }
         public void Saludar()
         {
@@ -65,23 +77,10 @@ namespace menumenu
 
                         break;
                     case "3":
-                        bool decision = false;
-                        Console.WriteLine("ingrese si o no, si quiere cerrar el programa");
-                        String P = Console.ReadLine();
-                        if (P == "si" || P == "SI")
-                        {
-                            decision = true;
-                            
-                        }
-                        else if (P == "no" || P == "NO")
-                        {
-                            decision = false;
-                            
-                        }
-                        if (m.cerrar(decision == true))
-                        {
-                            return;
-                        }
+
+
+                        m.cerrar();
+                        Console.Clear();
                         break;
 
                 }
