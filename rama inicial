@@ -2,16 +2,17 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Channels;
 using System.Threading.Tasks;
 
 namespace menumenu
 {
     class menumetodos
     {
-        public bool cerrar( bool P)
+        public bool cerrar(bool d)
         {
-            
-            if (P== false)
+
+            if (d == false)
             {
                 Console.WriteLine("sigamos con el programa");
                 Console.ReadLine();
@@ -21,16 +22,18 @@ namespace menumenu
             else
             {
                 Console.WriteLine("cerrando programa...");
+                Console.ReadLine();
                 return true;
+                
             }
 
         }
         public void Saludar()
         {
             Console.Write("Ingrese su nombre: ");
-            string nombre = Console.ReadLine();       
+            string nombre = Console.ReadLine();
             Console.WriteLine("¡Hola, " + nombre +"!");
-             Console.ReadLine();
+            Console.ReadLine();
         }
         public void Fecha()
         {
@@ -68,12 +71,17 @@ namespace menumenu
                         if (P == "si" || P == "SI")
                         {
                             decision = true;
+                            
                         }
                         else if (P == "no" || P == "NO")
                         {
                             decision = false;
+                            
                         }
-                        m.cerrar(decision);
+                        if (m.cerrar(decision == true))
+                        {
+                            return;
+                        }
                         break;
 
                 }
